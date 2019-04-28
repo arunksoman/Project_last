@@ -1,0 +1,77 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.20822027408227745 0.8723035370219994 0.4424148016963389 3.9207204509270333
+  position -0.9001921947164071 1.4783485026554541 -0.5357593179462993
+}
+RectangleArena {
+  translation -0.002413296771028306 0 -0.0017362900783550739
+}
+DEF e-puck2 E-puck {
+  translation 0.23653900260428876 1.7714493286101474e-06 -0.24300510358752322
+  rotation 0.002373466795942433 0.9999911737215289 -0.003466862328892911 2.097458657419328
+  name "e-puck2"
+  controller "swarm_controller"
+}
+PointLight {
+  attenuation 1 0 1
+  intensity 0.3
+  location 0 1 1
+}
+DEF Food Solid {
+  translation -0.014737933651390929 0.07454131294635823 0.007413869578367784
+  rotation 0.012445114704297848 0.9997993071048943 -0.01569919209927972 0.010983705636347818
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          emissiveColor 0.9372549019607843 0.1607843137254902 0.1607843137254902
+        }
+        texture ImageTexture {
+        }
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+    PointLight {
+      attenuation 0 0 1
+      location 0 0.3 0
+    }
+  ]
+  boundingObject DEF FoodBox Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+    mass 0.2
+    centerOfMass [
+      0 0 0
+    ]
+  }
+  recognitionColors [
+    0.9372549019607843 0.1607843137254902 0.1607843137254902
+  ]
+}
+DEF e-puck3 E-puck {
+  translation 0.3128527326496231 -6.948630093235944e-06 0.34196710335576636
+  rotation 0.10414144067631224 0.9945549383000173 0.0038775039536687672 0.07347598636972791
+  name "e-puck3"
+  controller "swarm_controller"
+}
+DEF e-puck1 E-puck {
+  translation -0.06060020897814522 6.965399078698309e-06 0.3808777059757939
+  rotation -0.0009800165963826104 0.9999954035112465 -0.0028692375032365785 -2.708680508960667
+  name "e-puck1"
+  controller "swarm_controller"
+}
+DEF e-puck0 E-puck {
+  translation 0.13653900260428875 1.7714493286101474e-06 -0.34300510358752323
+  rotation 0.002373466795942433 0.9999911737215289 -0.003466862328892911 2.097458657419328
+  name "e-puck0"
+  controller "swarm_controller"
+}
+DirectionalLight {
+  direction 0 -1 0
+  intensity 2
+}
